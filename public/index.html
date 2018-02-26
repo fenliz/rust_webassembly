@@ -1,26 +1,6 @@
 <html>
+<script src="/script.js"></script>
 <body>
 <h1>Web Assembly Test</h1>
 </body>
-<script>
-    // var request = new XMLHttpRequest();
-    // request.open('GET', 'test.wasm');
-    // request.responseType = 'arrayBuffer';
-    // request.send();
-    //
-    // request.onload = function() {
-    //     var bytes = request.response;
-    //     WebAssembly.instantiate(bytes, importObject)
-    //         .then(results => {
-    //        alert(results.instance.exprots.add_one(0));
-    //     });
-    // }
-
-    fetch('/test.wasm', {mode: 'no-cors'})
-        .then(response => response.arrayBuffer())
-        .then(bytes => WebAssembly.instantiate(bytes, {}))
-        .then(results => {
-       alert(results.instance.exports.add_one(0));
-    });
-</script>
 </html>
