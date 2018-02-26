@@ -3,4 +3,8 @@ name = "rust_webassembly"
 version = "0.1.0"
 authors = ["Charlie Forsberg Hedberg <cfh91@hotmail.com>"]
 
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
 [dependencies]
